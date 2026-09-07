@@ -1,0 +1,179 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Sancin Beauty design system.
+ * Paleta oficial: off-white #EFECE7, verde oliva #535945, dourado #AE8625,
+ * terrosos #AD8C74 / #B29F8E, grafite #333333.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-gold: var(--gold);
+  --color-gold-foreground: var(--gold-foreground);
+  --color-clay: var(--clay);
+  --color-sand: var(--sand);
+  --color-cream: var(--cream);
+  --color-graphite: var(--graphite);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1.5rem;
+
+  --cream: oklch(0.941 0.006 84.5);
+  --olive: oklch(0.405 0.026 118);
+  --gold: oklch(0.639 0.117 82);
+  --gold-foreground: oklch(0.98 0.005 84.5);
+  --clay: oklch(0.657 0.045 55);
+  --sand: oklch(0.7 0.028 70);
+  --graphite: oklch(0.323 0 0);
+
+  --background: var(--cream);
+  --foreground: var(--graphite);
+  --card: oklch(0.975 0.004 84.5);
+  --card-foreground: var(--graphite);
+  --popover: oklch(0.975 0.004 84.5);
+  --popover-foreground: var(--graphite);
+  --primary: var(--olive);
+  --primary-foreground: oklch(0.965 0.006 84.5);
+  --secondary: oklch(0.9 0.012 78);
+  --secondary-foreground: var(--olive);
+  --muted: oklch(0.912 0.009 80);
+  --muted-foreground: oklch(0.49 0.017 70);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.98 0.005 84.5);
+  --destructive: oklch(0.55 0.16 27);
+  --destructive-foreground: oklch(0.98 0.005 84.5);
+  --border: oklch(0.87 0.011 78);
+  --input: oklch(0.87 0.011 78);
+  --ring: var(--gold);
+  --chart-1: var(--olive);
+  --chart-2: var(--gold);
+  --chart-3: var(--clay);
+  --chart-4: var(--sand);
+  --chart-5: var(--graphite);
+  --sidebar: var(--cream);
+  --sidebar-foreground: var(--graphite);
+  --sidebar-primary: var(--olive);
+  --sidebar-primary-foreground: oklch(0.965 0.006 84.5);
+  --sidebar-accent: oklch(0.9 0.012 78);
+  --sidebar-accent-foreground: var(--olive);
+  --sidebar-border: oklch(0.87 0.011 78);
+  --sidebar-ring: var(--gold);
+
+  --gradient-veil: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--cream) 100%, transparent),
+    color-mix(in oklab, var(--sand) 22%, var(--cream))
+  );
+  --gradient-gold: linear-gradient(
+    100deg,
+    color-mix(in oklab, var(--gold) 92%, var(--clay)),
+    var(--gold)
+  );
+  --shadow-soft: 0 24px 60px -32px color-mix(in oklab, var(--olive) 45%, transparent);
+  --shadow-lift: 0 32px 80px -40px color-mix(in oklab, var(--graphite) 40%, transparent);
+  --transition-calm: 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark {
+  --background: oklch(0.24 0.012 110);
+  --foreground: oklch(0.94 0.006 84.5);
+  --card: oklch(0.28 0.014 112);
+  --card-foreground: oklch(0.94 0.006 84.5);
+  --popover: oklch(0.28 0.014 112);
+  --popover-foreground: oklch(0.94 0.006 84.5);
+  --primary: oklch(0.72 0.03 118);
+  --primary-foreground: oklch(0.2 0.01 110);
+  --secondary: oklch(0.34 0.016 112);
+  --secondary-foreground: oklch(0.94 0.006 84.5);
+  --muted: oklch(0.34 0.016 112);
+  --muted-foreground: oklch(0.75 0.018 84);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.2 0.01 110);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--gold) 88%, var(--graphite));
+}
+
+@utility surface-card {
+  background-color: var(--color-card);
+  border: 1px solid color-mix(in oklab, var(--sand) 45%, transparent);
+  border-radius: var(--radius-4xl);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility petal {
+  border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+}

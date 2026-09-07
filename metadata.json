@@ -1,0 +1,6 @@
+{
+  "name": "Sancin Beauty",
+  "description": "Sancin Beauty: Crafted Care - Landing page para clínica de estética, sobrancelhas e bem-estar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

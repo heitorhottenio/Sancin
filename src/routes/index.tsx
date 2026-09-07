@@ -157,10 +157,11 @@ export function Index() {
             <div className="relative overflow-hidden rounded-[3rem] border border-border">
               <img
                 src={heroModel}
-                alt="Modelo com pele luminosa em atendimento na Sancin Beauty"
-                width={1008}
-                height={1264}
+                alt="Modelo com cuidados estéticos na Sancin Beauty"
+                width={800}
+                height={1003}
                 className="h-full w-full object-cover"
+                loading="eager"
               />
 
               {/* setas delicadas indicando procedimentos */}
@@ -226,9 +227,8 @@ export function Index() {
       >
         <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="max-w-2xl">
-          <p className="eyebrow text-cream/80">Nossos cuidados</p>
-          <h2 className="mt-4 text-4xl text-cream sm:text-5xl">
-            Procedimentos organizados por rituais
+          <h2 className="text-4xl text-cream sm:text-5xl">
+            Nossos cuidados
           </h2>
           <p className="mt-5 text-base leading-relaxed text-cream/75">
             Do olhar às mãos, cada categoria reúne protocolos completos para você escolher com

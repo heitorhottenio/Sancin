@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { SancinLogo } from "@/components/site/SancinLogo";
+import heroLogo from "@/assets/sancin-hero-logo.png";
 import heroModel from "@/assets/hero-model.jpg";
 import spaInterior from "@/assets/spa-interior.jpg";
 import beforeImg from "@/assets/before-brows.jpg";
@@ -86,7 +87,7 @@ const hotspots = [
 
 export function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-pattern-logo">
       <header className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-6">
         <a href="#" className="flex items-center">
           <SancinLogo heightClass="h-20 sm:h-24" />
@@ -109,18 +110,19 @@ export function Index() {
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-[1fr_1.05fr]">
           <div className="order-2 lg:order-1">
             <p className="eyebrow">Estética · Bem-estar · Beleza</p>
-            <h1 className="mt-6 text-5xl leading-[1.05] text-primary sm:text-6xl">
-              Cuidados desenhados
-              <br />
-              com precisão
-              <em className="font-normal italic text-accent"> e carinho</em>
-            </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Na Sancin Beauty cada detalhe é pensado para realçar a sua beleza natural — com
-              técnica apurada, produtos de excelência e um ambiente que convida ao descanso.
-            </p>
 
-            <div className="mt-14 flex flex-wrap items-center gap-3">
+            <h1 className="mt-4 sm:mt-5">
+              <img
+                src={heroLogo}
+                alt="Sancin Beauty"
+                width={622}
+                height={291}
+                className="h-24 w-auto object-contain mix-blend-multiply sm:h-32 md:h-36"
+              />
+              <span className="sr-only">Sancin Beauty</span>
+            </h1>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href={WHATSAPP}
                 className="rounded-full px-7 py-3.5 text-xs uppercase tracking-[0.2em] text-gold-foreground transition-transform hover:-translate-y-0.5"
@@ -135,6 +137,11 @@ export function Index() {
                 Ver procedimentos
               </a>
             </div>
+
+            <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
+              Na Sancin Beauty cada detalhe é pensado para realçar a sua beleza natural — com
+              técnica apurada, produtos de excelência e um ambiente que convida ao descanso.
+            </p>
 
             <dl className="mt-12 grid max-w-md grid-cols-3 gap-4 border-t border-border pt-8">
               {trust.map((t) => (
@@ -193,11 +200,11 @@ export function Index() {
               {hotspots.map((h) => (
                 <span
                   key={h.label}
-                  className="absolute hidden -translate-y-1/2 rounded-full bg-background/85 px-3 py-1.5 text-[0.62rem] uppercase tracking-[0.16em] text-primary backdrop-blur-sm sm:block"
+                  className="absolute z-10 -translate-y-1/2 rounded-full border border-border/40 bg-background/90 px-2 py-0.5 text-[0.54rem] font-medium uppercase tracking-[0.08em] text-primary shadow-xs backdrop-blur-sm sm:px-3 sm:py-1.5 sm:text-[0.62rem] sm:tracking-[0.16em]"
                   style={
                     h.side === "left"
-                      ? { top: h.top, left: "3%" }
-                      : { top: h.top, right: "3%" }
+                      ? { top: h.top, left: "2.5%" }
+                      : { top: h.top, right: "2.5%" }
                   }
                 >
                   {h.label}
@@ -206,7 +213,7 @@ export function Index() {
               {hotspots.map((h) => (
                 <span
                   key={`${h.label}-dot`}
-                  className="absolute hidden h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent sm:block"
+                  className="absolute z-10 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent ring-2 ring-background/60"
                   style={{
                     top: h.y2,
                     left: h.side === "left" ? "40%" : "58%",

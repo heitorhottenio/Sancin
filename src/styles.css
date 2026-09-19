@@ -148,6 +148,9 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    background-image: url("/logofundo-pattern.png?v=3");
+    background-repeat: repeat;
+    background-size: 56px 56px;
   }
 
   h1,
@@ -176,4 +179,16 @@
 
 @utility petal {
   border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+}
+
+@utility bg-pattern-logo {
+  background-image: url("/logofundo-pattern.png?v=3");
+  background-repeat: repeat;
+  background-size: 56px 56px;
+}
+
+@utility bg-pattern-arrows {
+  background-image: url("/logofundo-pattern.png?v=3");
+  background-repeat: repeat;
+  background-size: 56px 56px;
 }

@@ -37,6 +37,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
+  --color-olive: var(--olive);
   --color-gold: var(--gold);
   --color-gold-foreground: var(--gold-foreground);
   --color-clay: var(--clay);
@@ -64,7 +65,7 @@
   --radius: 1.5rem;
 
   --cream: oklch(0.941 0.006 84.5);
-  --olive: oklch(0.405 0.026 118);
+  --olive: #535945;
   --gold: oklch(0.639 0.117 82);
   --gold-foreground: oklch(0.98 0.005 84.5);
   --clay: oklch(0.657 0.045 55);
